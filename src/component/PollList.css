@@ -1,0 +1,178 @@
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  margin: 10px;
+  width: calc(50% - 20px);
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+img {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.poll-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  color: navy;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.title {
+  flex: 1;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(19, 18, 18);
+}
+
+.modal-content {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-end;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: auto;
+  position: fixed;
+}
+
+.modal-content h2 {
+  text-align: left;
+  color: navy;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.modal-content .header-content {
+  border-bottom: none;
+  padding: 10px;
+}
+
+.modal-content .header-content .poll-title {
+  color: rgb(4, 4, 4);
+  font-size: 1.5em;
+  margin: 5px 0;
+}
+
+.modal-content .header-content .poll-publishedDate {
+  color: rgb(10, 10, 167);
+  font-size: 0.8em;
+  margin: 5px 0;
+}
+
+.modal-content .header-content h2 {
+  margin-bottom: 10px;
+}
+
+
+.modal-content .body-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.modal-content .body-content ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+
+}
+
+.modal-content .body-content li {
+  margin-bottom: 1px;
+  flex: 1 0 calc(50% - 10px);
+  border-bottom: none;
+
+}
+
+.modal-content .body-content li:hover {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.modal-content .body-content li:nth-of-type(odd) button {
+  background-color: #e54e0e;
+  color: white;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+}
+
+.modal-content .body-content li:nth-of-type(odd) button:hover {
+  background-color: #ff6f3d;
+}
+
+.modal-content .body-content li:nth-of-type(even) button {
+  background-color: #24278e;
+  color: white;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+}
+
+.modal-content .body-content li:nth-of-type(even) button:hover {
+  background-color: #4f50b4;
+}
+
+.modal-content .chart-container {
+  padding: 10px;
+}
+
+.chart-container {
+  height: 200px;
+}
+
+.body-content {
+  display: flex;
+  align-items: center;
+}
+
+.close-btn {
+  background-color: #f3ecec;
+}
